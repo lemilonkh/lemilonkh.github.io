@@ -12,7 +12,7 @@ layout: default
 
 ## Education
 
-| Year | School |
+| Year<img width=300> | School<img width=300> |
 |------|--------|
 | 2014 - 2018 | **Hasso-Plattner-Institute Potsdam**<br>Bachelor of Science (IT-Systems Engineering), final grade 1.9<br>Specialized in real-time 3D rendering, big data/ databases |
 | 2008 - 2014 | **Hermann-von-Helmholtz Secondary School Potsdam**<br>Final grade (Abitur): 1.1<br>Advanced courses: CS, math, physics, english, german<br>Exam subjects: math, computer science, english, economics |
@@ -20,7 +20,7 @@ layout: default
 
 ## Work Experience
 
-| Year<img width=300> | Job |
+| Year<img width=300> | Job<img width=300> |
 |------|-----|
 | 2021 - 2023 | Chief Technological Officer at [**Realm**](https://realm.art)<br>Leading three software teams working on a React Native app, a NextJS/ React web frontend, NodeJS/ NestJS backend and a Godot Engine/ Nakama based massively multiplayer online game for Android and iOS, experience in writing Solidity contracts and web3.js/ React frontends for them |
 | 2020 - 2021 | Senior Software Engineer at [**Domi Labs**](https://domilabs.io/)<br>Focus on Self-Sovereign Identity, Clojure, NodeJS, React, TypeScript, Python, Continuous Integration |
