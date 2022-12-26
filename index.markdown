@@ -9,3 +9,5 @@ layout: default
 \>> Listen to my music at [Audius](https://audius.co/alghost)  
   
 \>> Follow me on [Mastodon](https://mastodon.gamedev.place/@alghost)  
+  
+\>> More on [LinkTree](https://linktr.ee/alghost)
