@@ -1,5 +1,8 @@
 ---
 layout: default
+nav_title: Home
+show_in_navbar: true
+order: 1
 ---
 
 \>> Check out my resume [here](/resume)  
