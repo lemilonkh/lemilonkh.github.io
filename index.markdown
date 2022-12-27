@@ -11,6 +11,6 @@ order: 1
   
 \>> Listen to my music at [Audius](https://audius.co/alghost)  
   
-\>> Follow me on [Mastodon](https://mastodon.gamedev.place/@alghost)  
-  
+\>> Follow me on <a rel="me" href="https://mastodon.gamedev.place/@alghost">Mastodon</a>  
+
 \>> More on [LinkTree](https://linktr.ee/alghost)
