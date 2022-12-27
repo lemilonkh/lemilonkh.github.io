@@ -36,6 +36,18 @@ plugins:
 github:
   is_project_page: false
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+      show_in_navbar: false
+      order: 999
+
+exclude:
+  - .history/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
