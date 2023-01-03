@@ -1,8 +1,9 @@
 ---
 layout: default
-is_resume: true
+permalink: /resume
 show_in_navbar: true
 order: 2
+custom_css: resume
 ---
 
 # Resume
