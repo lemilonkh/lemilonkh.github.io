@@ -1,0 +1,28 @@
+.homegrid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  text-align: center;
+}
+
+.homelink {
+  width: 512px;
+}
+
+.homelink a {
+  color: black;
+  text-decoration: none;
+}
+
+.homelink img {
+  width: auto;
+  height: 64px;
+}
+
+.homelink p {
+  width: 105px;
+}
+
+.site-footer {
+  text-align: center;
+}

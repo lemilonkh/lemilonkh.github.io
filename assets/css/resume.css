@@ -1,0 +1,15 @@
+strong, a, th {
+  color: #159957;
+}
+
+#content a {
+  text-decoration: underline;
+}
+
+th {
+  min-width: 150px;
+}
+
+table td:last-child {
+  width: 100%;
+}
