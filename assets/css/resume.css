@@ -13,3 +13,7 @@ th {
 table td:last-child {
   width: 100%;
 }
+
+#content {
+  color: black;
+}
