@@ -11,12 +11,17 @@
 
 .homelink a {
   color: black;
-  text-decoration: none;
 }
 
 .homelink img {
   width: auto;
   height: 64px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.homelink img:hover {
+  transform: scale(1.25);
 }
 
 .homelink p {
