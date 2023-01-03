@@ -27,3 +27,28 @@
   background-color: rgba(255, 255, 255, 0.4);
   border-color: rgba(255, 255, 255, 0.5);
 }
+
+.page-header {
+  background: linear-gradient(120deg, #036779, #57ac1f);
+  background-size: 400% 400%;
+
+  -webkit-animation: HeaderAnimation 30s ease infinite;
+  -moz-animation: HeaderAnimation 30s ease infinite;
+  animation: HeaderAnimation 30s ease infinite;
+}
+
+@-webkit-keyframes HeaderAnimation {
+  0%{background-position:0% 13%}
+  50%{background-position:100% 88%}
+  100%{background-position:0% 13%}
+}
+@-moz-keyframes HeaderAnimation {
+  0%{background-position:0% 13%}
+  50%{background-position:100% 88%}
+  100%{background-position:0% 13%}
+}
+@keyframes HeaderAnimation {
+  0%{background-position:0% 13%}
+  50%{background-position:100% 88%}
+  100%{background-position:0% 13%}
+}
