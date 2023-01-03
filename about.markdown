@@ -1,18 +1,19 @@
 ---
 layout: default
 title: About
-permalink: /about/
+permalink: /about
+show_in_navbar: true
+order: 9999
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Created by Milan Gruner. All rights reserved.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Made using [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+## Image attributions
+* Elephant by Iconic from <a href="https://thenounproject.com/browse/icons/term/elephant/" target="_blank" title="Elephant Icons">Noun Project</a>
+* Resume by ProSymbols from <a href="https://thenounproject.com/browse/icons/term/resume/" target="_blank" title="Resume Icons">Noun Project</a>
+* games by Dewanata Studio from <a href="https://thenounproject.com/browse/icons/term/games/" target="_blank" title="games Icons">Noun Project</a>
+* Music by Kawalan Icon from <a href="https://thenounproject.com/browse/icons/term/music/" target="_blank" title="Music Icons">Noun Project</a>
+* Music by YANDI RS from <a href="https://thenounproject.com/browse/icons/term/music/" target="_blank" title="Music Icons">Noun Project</a>
+* link by Syahrul Hidayatullah from <a href="https://thenounproject.com/browse/icons/term/link/" target="_blank" title="link Icons">Noun Project</a>
