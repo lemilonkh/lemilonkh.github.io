@@ -3,14 +3,16 @@ layout: default
 nav_title: Home
 show_in_navbar: true
 order: 1
+custom_css: home
 ---
 
-\>> Check out my resume [here](/resume)  
-  
-\>> Play my games at [itch.io](https://alghost.itch.io)  
-  
-\>> Listen to my music at [Audius](https://audius.co/alghost)  
-  
-\>> Follow me on <a rel="me" href="https://mastodon.gamedev.place/@alghost">Mastodon</a>  
-
-\>> More on [LinkTree](https://linktr.ee/alghost)
+<div class="homegrid">
+{% for link in site.data.home_links %}
+  <div class="homelink">
+    <a href="{{ link.link }}" rel="{{ link.rel }}">
+      <img src="/assets/icons/{{ link.icon }}.svg" />
+      <p>{{ link.name }}</p>
+    </a>
+  </div>
+{% endfor %}
+</div>
