@@ -18,8 +18,8 @@ custom_css: resume
 
 | Year | School |
 |:----:|--------|
-| 2014 - 2018 | **Hasso-Plattner-Institute Potsdam**<br>Bachelor of Science (IT-Systems Engineering), final grade 1.9<br>Specialized in real-time 3D rendering, big data/ databases |
-| 2008 - 2014 | **Hermann-von-Helmholtz Secondary School Potsdam**<br>Final grade (Abitur): 1.1<br>Advanced courses: CS, math, physics, english, german<br>Exam subjects: math, computer science, english, economics |
+| 2014 - 2018 | **Hasso-Plattner-Institute Potsdam**<br>Bachelor of Science (IT-Systems Engineering), final grade 1.9<br>Specialized in real-time 3D rendering, big data analytics, human computer interaction |
+| 2008 - 2014 | **Hermann-von-Helmholtz Secondary School Potsdam**<br>Final grade (Abitur): 1.1<br>Advanced courses: computer science, math, physics, english, german<br>Exam subjects: math, computer science, english, economics |
 | 2002 - 2008 | **Max-Dortu Elementary School Potsdam** |
 
 ## Work Experience
