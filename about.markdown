@@ -6,9 +6,9 @@ show_in_navbar: true
 order: 9999
 ---
 
-Created by Milan Gruner. All rights reserved.
+Created 2023 by Milan Gruner/ GrunerTech. All rights reserved.
 
-Made using [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/)
+Made using [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/).
 
 ## Image attributions
 * Elephant by Iconic from <a href="https://thenounproject.com/browse/icons/term/elephant/" target="_blank" title="Elephant Icons">Noun Project</a>
