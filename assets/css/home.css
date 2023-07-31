@@ -3,10 +3,14 @@
   gap: 16px;
   justify-content: center;
   text-align: center;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
 .homelink {
-  width: 512px;
+  width: 120px;
+  align-items: center;
+  text-align: center;
 }
 
 .homelink a {
@@ -25,7 +29,8 @@
 }
 
 .homelink p {
-  width: 105px;
+  width: 100%;
+  text-align: center;
 }
 
 .site-footer {
