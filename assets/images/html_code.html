@@ -7,11 +7,3 @@
 <meta name="msapplication-TileColor" content="#00aaaa">
 <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
 <meta name="theme-color" content="#00aaaa">
-
-<!--<link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">-->
-<link rel="stylesheet" href="{{ '/assets/css/custom.css?v=' | append: site.github.build_revision | relative_url }}">
-{% if page.custom_css %}
-  {% for stylesheet in page.custom_css %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ stylesheet }}.css">
-  {% endfor %}
-{% endif %}
