@@ -2,7 +2,7 @@
 layout: default
 permalink: /resume
 show_in_navbar: true
-order: 2
+order: 3
 custom_css: resume
 ---
 

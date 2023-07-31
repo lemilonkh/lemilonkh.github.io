@@ -3,7 +3,7 @@ layout: default
 nav_title: Games
 permalink: /games
 show_in_navbar: true
-order: 3
+order: 2
 ---
 
 {% include gallery.html folder="assets/gallery/img" link-sections=true %}
