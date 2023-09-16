@@ -22,6 +22,7 @@ layout: ../layouts/Resume.astro
 
 | Year | Job |
 |:----:|-----|
+| 2023 - Present | Lead Software Engineer at [**Open Earth Foundation**](https://openearth.org)<br>Creating open source software to track climate change. Using React, Redux, NextJS, TailwindCSS, Chakra UI, sequelize ORM, Recharts. |
 | 2021 - 2023 | Chief Technological Officer at [**Realm**](https://realm.art)<br>Leading three software teams working on a React Native app, a NextJS/ React web frontend, NodeJS/ NestJS backend and a Godot Engine/ Nakama based massively multiplayer online game for Android and iOS, experience in writing Solidity contracts and web3.js/ React frontends for them |
 | 2020 - 2021 | Senior Software Engineer at [**Domi Labs**](https://domilabs.io/)<br>Focus on Self-Sovereign Identity, Clojure, NodeJS, React, TypeScript, Python, Continuous Integration |
 | 2019 - 2020 | Freelance Software Engineering for **WaterClub**<br>Worked on creating an IOT water dispenser (using Android & Arduino) integrated with a Flutter cross-platform app and Firebase |
