@@ -1,4 +1,6 @@
-# Astro Starter Kit: Minimal
+# [gruner.tech](https://gruner.tech) website
+
+Built using [Astro](https://astro.build)
 
 ```sh
 npm create astro@latest -- --template minimal
