@@ -7,6 +7,8 @@ const allGames = await getCollection('games');
 const games = allGames.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
+
+const cellSize = "344px";
 ---
 
 <BaseLayout title="Games">
@@ -14,7 +16,7 @@ const games = allGames.sort(
   {games.map(game => (
     <div class="cell">
       <a href={"/games/" +game.slug}>
-        <Image src={game.data.screenshots[0]} width="600" height="600" alt={game.data.name} class="cell-image" />
+        <Image src={game.data.screenshots[0]} alt={game.data.name} class="cell-image" />
         <div class="overlay" />
         <div class="info">
           <p class="postlink">{game.data.name}</p>
@@ -24,18 +26,18 @@ const games = allGames.sort(
     </div>
   ))}
 </BaseLayout>
-<style>
+<style define:vars={{ cellSize }}>
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, var(--cellSize));
     gap: 16px;
     width: 100%;
     align-items: center;
     place-content: start;
   }
   .cell {
-    width: 300px;
-    height: 300px;
+    width: var(--cellSize);
+    height: var(--cellSize);
     cursor: pointer;
     position: relative;
   }
@@ -51,7 +53,7 @@ const games = allGames.sort(
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
+    width: var(--cellSize);
     height: 100%;
     background: linear-gradient(to bottom, transparent 20%, black 100%);
     background-position: 0px;
@@ -67,7 +69,7 @@ const games = allGames.sort(
   }
   .info {
     position: absolute;
-    width: 268px;
+    width: calc(var(--cellSize) - 32px);
     bottom: 16px;
     left: 16px;
     color: white;
