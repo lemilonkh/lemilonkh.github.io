@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #238711;
+  --primary-light-color: #23BB33;
+  --primary-dark-color: #135501;
+}
+
+html {
+  font-family: sans-serif;
+  background-color:hsla(125,25%,54%,1);
+  background-image:
+  radial-gradient(at 60% 20%, hsla(105,57%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 23% 91%, hsla(171,48%,73%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 95%, hsla(105,57%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 61% 77%, hsla(192,57%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 74% 47%, hsla(85,57%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 31% 23%, hsla(88,57%,76%,1) 0px, transparent 50%),
+  radial-gradient(at 84% 16%, hsla(158,57%,76%,1) 0px, transparent 50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 120ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+table, td, th {
+  border-collapse: collapse;
+  border: 1px solid #333;
+  padding: 16px;
+}
+

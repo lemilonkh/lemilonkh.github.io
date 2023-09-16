@@ -1,0 +1,55 @@
+---
+const currentPath = new URL(Astro.request.url).pathname;
+function isActivePage(page: string) {
+  let isActive = currentPath.startsWith(page);
+  if (page === "/") {
+    isActive = currentPath === "/" ;
+  }
+  return isActive ? 'active' : '';
+}
+---
+<header>
+  <a href="/" class="heading">
+    <h1><span class="highlight funky">G</span>runer<span class="highlight">T</span>ech</h1>
+  </a>
+  <nav>
+    <a href="/" class={isActivePage("/")}>Home</a>
+    <a href="/games" class={isActivePage("/games")}>Games</a>
+    <a href="/blog" class={isActivePage("/blog")}>Blog</a>
+    <a href="/resume" class={isActivePage("/resume")}>Resume</a>
+    <a href="/contact" class={isActivePage("/contact")}>Contact</a>
+    <a href="/about" class={isActivePage("/about")}>About</a>
+  </nav>
+</header>
+<style>
+  .heading {
+    color: var(--primary-dark-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .highlight {
+    color: var(--primary-color);
+  }
+  .funky {
+    display: inline-block;
+    transition: transform 0.15s ease-out, color 0.15s ease-out;
+  }
+  :hover > .funky {
+    transform: rotate(-90deg) translateX(-5px);
+    color: var(--primary-light-color);
+  }
+  nav > * {
+    margin: 0 16px 0 0;
+    text-decoration: none;
+    font-size: 14pt;
+    color: var(--primary-dark-color);
+    transition: color 0.3s ease;
+  }
+  nav a.active {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  nav a:hover {
+    color: var(--primary-light-color);
+  }
+</style>

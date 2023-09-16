@@ -1,0 +1,22 @@
+---
+import { formatDate } from "../util/format";
+const { frontmatter } = Astro.props;
+---
+{frontmatter.image &&
+  <img alt={frontmatter.image.alt} src={frontmatter.image.url} class="cover" />
+}
+<p class="meta">by {frontmatter.author}, written on: {formatDate(frontmatter.date)}</p>
+<slot />
+
+<style>
+  .meta {
+    color: var(--primary-dark-color);
+  }
+
+  .cover {
+    width: 100%;
+    background-color: #333;
+    padding: 32px;
+    border-radius: 32px;
+  }
+</style>

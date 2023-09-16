@@ -1,0 +1,68 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import googlePlayBadge from "../../content/games/images/google_play_badge.png";
+
+interface Props {
+  game: CollectionEntry<'games'>;
+}
+
+export async function getStaticPaths() {
+  const games = await getCollection('games');
+  return games.map((game: CollectionEntry<'games'>) => ({
+    params: { slug: game.slug }, props: { game },
+  }));
+}
+
+function getAspectHeight(width, image) {
+  return width * (image.height / image.width);
+}
+
+const { game } = Astro.props;
+const { Content } = await game.render();
+---
+<BaseLayout title={game.data.name}>
+  {game.data.links.map((link) => {
+    let child = link;
+    if (link.indexOf("itch.io") > -1) {
+      child = <img src="/icons/itchio-badge.svg" alt="Download on itch.io" width="300" class="badge" />;
+    } else if(link.indexOf("play.google.com") > -1) {
+      child = <Image src={googlePlayBadge} width="300" height={getAspectHeight(300, googlePlayBadge)} alt="Download on Google Play" />;
+    }
+
+    return <a href={link} target="_blank" rel="noreferrer noopener">{child}</a>;
+  })}
+  <p class="description">{game.data.description}</p>
+  <Image
+    src={game.data.image}
+    alt={`${game.data.name} header image`}
+    width={600}
+    height={getAspectHeight(600, game.data.image)}
+    class="screenshot"
+  />
+  {game.data.screenshots.map((screenshot) => (
+    <Image
+      src={screenshot}
+      alt={`${game.data.name} screenshot`}
+      width="600"
+      height={getAspectHeight(600, screenshot)}
+      class="screenshot"
+    />
+  ))}
+  <Content />
+</BaseLayout>
+<style>
+  .screenshot {
+    border-radius: 16px;
+    margin: 16px 0;
+    display: block;
+  }
+  .description {
+    font-size: 18pt;
+  }
+  .badge {
+    margin: 16px 0;
+    display: block;
+  }
+</style>

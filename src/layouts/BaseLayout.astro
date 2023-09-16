@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
+
+function getTitle(title: string) {
+  if (!title) {
+    return "GrunerTech";
+  }
+  return `${title} - GrunerTech`;
+}
+
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+    <BaseHead title={getTitle(title)} />
+  </head>
+  <body>
+    <Header />
+    <h1 class="title">{title}</h1>
+    <article>
+      <slot />
+    </article>
+    <Footer />
+  </body>
+</html>

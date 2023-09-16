@@ -1,16 +1,63 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import homeLinks from "../data/home-links.yml"; 
+interface HomeLink {
+  name: string;
+  icon: string;
+  link: string;
+  rel?: string;
+}
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="">
+  <div class="homegrid">
+    {homeLinks.map((link: HomeLink) => (
+      <div class="homelink">
+        <a href={link.link} rel={link.rel}>
+          <img src={`/icons/${link.icon}.svg`} />
+          <p>{link.name}</p>
+        </a>
+      </div>
+    ))}
+  </div>
+</BaseLayout>
+<style>
+  .homegrid {
+    display: flex;
+    gap: 16px;
+    max-width: 60ch;
+    margin: 64px auto;
+    justify-content: center;
+    text-align: center;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .homelink {
+    width: 120px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homelink img {
+    width: auto;
+    height: 64px;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .homelink img:hover {
+    transform: scale(1.25);
+  }
+
+  .homelink p {
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: underline var(--primary-color);
+  }
+  .homelink p:hover {
+    color: var(--primary-light-color);
+    text-decoration: underline var(--primary-light-color);
+  }
+</style>
