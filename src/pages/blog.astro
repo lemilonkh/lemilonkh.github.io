@@ -9,19 +9,28 @@ const blogPosts = (await getCollection('blog')).sort(
 ---
 
 <BaseLayout title="Blog">
-  {blogPosts.map(post => (
-    <li class="postlist">
-      <a href={"/blog/" +post.slug} class="postlink">{post.data.title}</a>
-      &mdash; 
-      <time datetime={post.data.date.toISOString()} class="timestamp">
-        {formatDate(post.data.date)}
-      </time>
-    </li>
-  ))}
+  <ul class="postlist">
+    {blogPosts.map(post => (
+      <li>
+        <a href={"/blog/" +post.slug} class="postlink">{post.data.title}</a>
+        &mdash;
+        <time datetime={post.data.date.toISOString()} class="timestamp">
+          {formatDate(post.data.date)}
+        </time>
+        <br />
+        {post.data.description}
+      </li>
+    ))}
+  </ul>
 </BaseLayout>
 <style>
   .postlist {
-    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .postlist li:not(:last-child) {
+    margin-bottom: 16px;
   }
   .postlink {
     color: var(--primary-color);
