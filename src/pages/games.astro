@@ -7,22 +7,52 @@ const allGames = await getCollection('games');
 const games = allGames.sort(
   (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );
----
 
-<BaseLayout title="Games">
-    <div class="grid">
-  {games.map(game => (
-    <div class="cell">
-      <a href={"/games/" +game.slug}>
-        <Image src={game.data.screenshots[0]} alt={game.data.name} class="cell-image" />
-        <div class="overlay" />
-        <div class="info">
-          <p class="postlink">{game.data.name}</p>
-          <p class="description">{game.data.description}</p>
-        </div>
-      </a>
-    </div>
-  ))}
+const anim = {
+  old: {
+    name: 'fadeOut',
+    duration: '0.2s',
+    easing: 'ease-out',
+    fillMode: 'forwards',
+  },
+  new: {
+    name: 'fadeIn',
+    duration: '0.2s',
+    easing: 'ease-out',
+    fillMode: 'forwards',
+  },
+};
+const imageAnimation = {
+  forwards: anim,
+  backwards: {old: {name: 'none'}, new: {name: 'none'}},
+};
+function getAspectHeight(width: number, image: ImageMetadata) {
+  return width * (image.height / image.width);
+}
+---
+<BaseLayout title="Games" useViewTransitions>
+  <div class="grid">
+    {games.map(game => (
+      <div class="cell">
+        <a href={"/games/" +game.slug}>
+          <Image
+            src={game.data.screenshots[0]}
+            alt={game.data.name}
+            width="600"
+            height={getAspectHeight(600, game.data.screenshots[0])}
+            transition:name={game.slug}
+            transition:animate={imageAnimation}
+            class="cell-image"
+          />
+          <div class="overlay" />
+          <div class="info">
+            <p class="postlink">{game.data.name}</p>
+            <p class="description">{game.data.description}</p>
+          </div>
+        </a>
+      </div>
+    ))}
+  </div>
 </BaseLayout>
 <style>
   .grid {
@@ -63,6 +93,7 @@ const games = allGames.sort(
     height: 100%;
     background: linear-gradient(to bottom, transparent 20%, black 100%);
     background-position: 0px;
+    z-index: 1;
     opacity: 0.8;
     transition: opacity 300ms ease-out;
     border-radius: 16px;
@@ -79,6 +110,7 @@ const games = allGames.sort(
     bottom: 0;
     padding: 16px;
     color: white;
+    z-index: 1;
   }
   .postlink {
     color: #FFF;

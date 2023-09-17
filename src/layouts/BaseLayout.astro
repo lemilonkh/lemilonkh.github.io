@@ -1,10 +1,15 @@
 ---
-import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
+interface Props {
+  title: string;
+  useViewTransitions?: boolean;
+}
+const { title, useViewTransitions } = Astro.props;
 
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title } = Astro.props;
+import '../styles/global.css';
 
 function getTitle(title: string) {
   if (!title) {
@@ -12,15 +17,15 @@ function getTitle(title: string) {
   }
   return `${title} - GrunerTech`;
 }
-
 ---
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
     <meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
     <BaseHead title={getTitle(title)} />
+    {useViewTransitions && <ViewTransitions />}
   </head>
   <body>
     <Header />

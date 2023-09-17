@@ -15,14 +15,14 @@ export async function getStaticPaths() {
   }));
 }
 
-function getAspectHeight(width, image) {
+function getAspectHeight(width: number, image: ImageMetadata) {
   return width * (image.height / image.width);
 }
 
 const { game } = Astro.props;
 const { Content } = await game.render();
 ---
-<BaseLayout title={game.data.name}>
+<BaseLayout title={game.data.name} useViewTransitions>
   {game.data.links.map((link) => {
     let child = link;
     if (link.indexOf("itch.io") > -1) {
@@ -41,12 +41,13 @@ const { Content } = await game.render();
     height={getAspectHeight(600, game.data.image)}
     class="screenshot"
   />
-  {game.data.screenshots.map((screenshot) => (
+  {game.data.screenshots.map((screenshot, i) => (
     <Image
       src={screenshot}
       alt={`${game.data.name} screenshot`}
       width="600"
       height={getAspectHeight(600, screenshot)}
+      transition:name={i === 0 ? game.slug : undefined}
       class="screenshot"
     />
   ))}
