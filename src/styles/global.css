@@ -49,3 +49,12 @@ table, td, th {
   padding: 16px;
 }
 
+a, a:visited {
+  color: var(--primary-color);
+  text-decoration: underline var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-light-color);
+  text-decoration: underline var(--primary-light-color);
+}
