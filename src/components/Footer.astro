@@ -1,12 +1,18 @@
 ---
 const year = new Date().getFullYear();
 ---
-<p class="footer">&copy {year} by Milan Gruner. All rights reserved.</p>
+<p class="footer">&copy {year} by Milan Gruner. All rights reserved. <a href="/rss.xml">RSS feed</a></p><p>
 <style>
 .footer {
   border-top: 1px solid #000;
   padding-top: 16px;
   color: #000;
   margin-bottom: 0;
+}
+.footer a, footer a:visited {
+  color: #000;
+}
+.footer a:hover {
+  color: #444;
 }
 </style>
