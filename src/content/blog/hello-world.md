@@ -1,12 +1,10 @@
 ---
-layout: ../../layouts/Post.astro
 title: 'Hello World!'
 date: 2023-09-16
 description: 'This website has been rebuilt with Astro'
 author: 'Milan Gruner'
-image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'The full Astro logo.'
+image: ./images/rocket.png
+imageAlt: Test
 tags: ["helloworld", "astro"]
 ---
 This website has been rebuilt from scratch with [Astro](https://astro.build).
