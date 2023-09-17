@@ -1,6 +1,9 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import { formatDate } from "../../util/format";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
 interface Props {
   post: CollectionEntry<'blog'>;
 }
@@ -15,6 +18,22 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 ---
+
 <BaseLayout title={post.data.title}>
+  {post.data.image &&
+    <Image alt={post.data.imageAlt || ""} src={post.data.image} class="cover" />
+  }
+  <p class="meta">by {post.data.author}, written on: {formatDate(post.data.date)}</p>
   <Content />
 </BaseLayout>
+
+
+<style>
+  .meta {
+    color: var(--primary-dark-color);
+  }
+
+  .cover {
+    border-radius: 32px;
+  }
+</style>
