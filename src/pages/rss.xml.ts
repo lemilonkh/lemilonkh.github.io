@@ -10,6 +10,12 @@ interface Item {
     title?: string;
     name?: string;
     description: string;
+    image?: {
+      url?: string;
+      src?: string;
+      format?: string;
+      alt?: string;
+    };
     date: Date;
     customData?: string;
   };
@@ -39,6 +45,11 @@ export const GET: APIRoute = async (context) => {
       customData: item.data.customData,
       link: `/${item.type}/${item.slug}`,
       content: sanitizeHtml(parser.render(item.body)),
+      enclosure: item.data.image ? {
+        url: item.data.image.url || item.data.image.src || 'https://gruner.tech/favicon.svg',
+        type: item.data.image.format ? `image/${item.data.image.format}` : 'image/png',
+        length: 0,
+      } : undefined,
     }));
 
   return rss({
