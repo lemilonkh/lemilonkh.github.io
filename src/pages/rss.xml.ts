@@ -11,13 +11,12 @@ interface Item {
     name?: string;
     description: string;
     image?: {
-      url?: string;
-      src?: string;
-      format?: string;
-      alt?: string;
+      src: string;
+      format: string;
+      width: number;
+      height: number;
     };
     date: Date;
-    customData?: string;
   };
   slug: string;
   body: string;
@@ -42,20 +41,24 @@ export const GET: APIRoute = async (context) => {
       title: item.data.title || item.data.name || "Untitled post",
       pubDate: item.data.date,
       description: item.data.description,
-      customData: item.data.customData,
       link: `/${item.type}/${item.slug}`,
       content: sanitizeHtml(parser.render(item.body)),
-      enclosure: item.data.image ? {
-        url: item.data.image.url || item.data.image.src || 'https://gruner.tech/favicon.svg',
-        type: item.data.image.format ? `image/${item.data.image.format}` : 'image/png',
-        length: 1,
-      } : undefined,
+      customData: item.data.image ? `<media:content
+        type="image/${item.data.image.format == "jpg" ? "jpeg" : "png"}"
+        width=${item.data.image.width}
+        height=${item.data.image.height}
+        medium="image"
+        url="${item.data.image.src}"
+      />` : undefined,
     }));
 
   return rss({
     title: "GrunerTech Blog",
     description: "Ramblings about game and software development",
     site: context.site!,
+    xmlns: {
+      media: "http://search.yahoo.com/mrss/",
+    },
     items,
     customData: `<language>en-us</language>`,
   });
