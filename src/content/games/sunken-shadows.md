@@ -4,7 +4,7 @@ description: First person roguelike in 32bit style set in a ruined underwater ci
 image: ./images/Sunken_Shadows_Header.png
 screenshots:
     - ./images/Sunken_Shadows_Screenshot.png
-date: 2023-09-16
+date: 2023-05-30
 links: 
     - https://alghost.itch.io/sunken-shadows
 ---

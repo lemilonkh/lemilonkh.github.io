@@ -4,7 +4,7 @@ description: Physics-based building and survival game in a hand drawn style
 image: ./images/Squirrel_Shelter_Header.png
 screenshots:
     - ./images/Squirrel_Shelter.png
-date: 2023-02-14
+date: 2022-10-30
 links: 
     - https://alghost.itch.io/legend-of-astram
 ---

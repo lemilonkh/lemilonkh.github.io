@@ -5,7 +5,7 @@ image: ./images/Legend_of_Astram_Header.png
 screenshots:
     - ./images/Legend_of_Astram.jpg
     - ./images/Legend_of_Astram2.jpg
-date: 2023-02-16
+date: 2022-10-30
 links: 
     - https://alghost.itch.io/legend-of-astram
 ---

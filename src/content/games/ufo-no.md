@@ -5,7 +5,7 @@ image: ./images/UFO_NO_Header.png
 screenshots:
     - ./images/UFO_NO.jpg
     - ./images/UFO_NO_Gameplay.gif
-date: 2023-02-10
+date: 2022-12-05
 links: 
     - https://alghost.itch.io/ufo-no
 ---

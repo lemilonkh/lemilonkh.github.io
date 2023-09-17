@@ -4,7 +4,7 @@ description: A gardening and cooking game made for LowRezJam 2022.
 image: ./images/Pixel_Garden_Header.png
 screenshots:
     - ./images/Pixel_Garden.png
-date: 2023-02-12
+date: 2022-08-07
 links: 
     - https://alghost.itch.io/pixel-garden
     - https://play.google.com/store/apps/details?id=tech.gruner.pixelgarden

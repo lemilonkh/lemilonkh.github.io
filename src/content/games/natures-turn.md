@@ -4,7 +4,7 @@ description: Turn based tactics game where you play as the nature on the board.
 image: ./images/Natures_Turn_Header.png
 screenshots:
     - ./images/Natures_Turn.png
-date: 2023-06-13
+date: 2023-07-09
 links: 
     - https://alghost.itch.io/natures-turn
 ---
