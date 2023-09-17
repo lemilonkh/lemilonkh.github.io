@@ -1,20 +1,19 @@
 :root {
   --primary-color: #238711;
-  --primary-light-color: #23BB33;
+  --primary-light-color: #44AA44;
   --primary-dark-color: #135501;
 }
 
 html {
   font-family: sans-serif;
-  background-color:hsla(125,25%,54%,1);
+  background-color:hsla(72,19%,55%,1);
   background-image:
-  radial-gradient(at 60% 20%, hsla(105,57%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 23% 91%, hsla(171,48%,73%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 95%, hsla(105,57%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 61% 77%, hsla(192,57%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 74% 47%, hsla(85,57%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 31% 23%, hsla(88,57%,76%,1) 0px, transparent 50%),
-  radial-gradient(at 84% 16%, hsla(158,57%,76%,1) 0px, transparent 50%);
+  radial-gradient(at 99% 84%, hsla(60,36%,63%,1) 0px, transparent 50%),
+  radial-gradient(at 78% 39%, hsla(97,36%,63%,1) 0px, transparent 50%),
+  radial-gradient(at 17% 33%, hsla(97,36%,63%,1) 0px, transparent 50%),
+  radial-gradient(at 97% 82%, hsla(323,36%,63%,1) 0px, transparent 50%),
+  radial-gradient(at 40% 60%, hsla(301,36%,63%,1) 0px, transparent 50%),
+  radial-gradient(at 24% 65%, hsla(39,36%,63%,1) 0px, transparent 50%);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
