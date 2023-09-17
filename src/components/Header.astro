@@ -10,7 +10,7 @@ function isActivePage(page: string) {
 ---
 <header>
   <a href="/" class="heading">
-    <h1><span class="highlight funky">G</span>runer<span class="highlight">T</span>ech</h1>
+    <h1><span class="highlight funky">G</span>runer<span class="highlight funky">T</span>ech</h1>
   </a>
   <nav>
     <a href="/" class={isActivePage("/")}>Home</a>
@@ -32,17 +32,17 @@ function isActivePage(page: string) {
   }
   .highlight {
     color: var(--primary-color);
-    transition: color 0.15s ease-out;
+    transition: color 0.4s ease-out;
   }
   .funky {
     display: inline-block;
-    transition: transform 0.15s ease-out;
+    transition: transform 0.4s ease-out;
   }
   :hover > .highlight {
     color: var(--primary-light-color);
   }
   :hover > .funky {
-    transform: rotate(-90deg) translateX(-5px);
+    transform: rotate(-360deg);
   }
   nav {
     display: flex;
