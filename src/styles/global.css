@@ -39,7 +39,7 @@ h1 {
 }
 
 .title {
-  margin-bottom: 8px;
+  margin: 8px 0 16px 0;
 }
 
 table, td, th {
