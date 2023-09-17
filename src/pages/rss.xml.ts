@@ -48,7 +48,7 @@ export const GET: APIRoute = async (context) => {
       enclosure: item.data.image ? {
         url: item.data.image.url || item.data.image.src || 'https://gruner.tech/favicon.svg',
         type: item.data.image.format ? `image/${item.data.image.format}` : 'image/png',
-        length: 0,
+        length: 1,
       } : undefined,
     }));
 
