@@ -1,6 +1,9 @@
 import rss from "@astrojs/rss";
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
+import sanitizeHtml from "sanitize-html";
+import MarkdownIt from "markdown-it";
+const parser = new MarkdownIt();
 
 interface Item {
   data: {
@@ -11,6 +14,7 @@ interface Item {
     customData?: string;
   };
   slug: string;
+  body: string;
   type?: string;
 }
 
@@ -34,6 +38,7 @@ export const GET: APIRoute = async (context) => {
       description: item.data.description,
       customData: item.data.customData,
       link: `/${item.type}/${item.slug}`,
+      content: sanitizeHtml(parser.render(item.body)),
     }));
 
   return rss({
